@@ -1,0 +1,34 @@
+# IBM Developer's Workframe/2 Make File Creation run at 16:01:52 on 01/01/93
+
+# Make File Creation run in directory:
+#   D:\DEV\SYSINFO;
+
+# Assumed INCLUDE environment variable path:
+#   D:\TOOLKT20\C\OS2H;
+#   D:\TOOLKT20\ASM\OS2INC;
+#   D:\IBMC\INCLUDE;
+#   D:\BCOS2\INCLUDE;
+#   C:\IBMLAN\NETSRC\H;
+#   D:\SQLLIB;
+#   C:\MUGLIB;
+
+
+SYSINFO.RES:  SYSINFO.RC  \
+#  {.;$(INCLUDE)}OS2.H  \
+   {.;$(INCLUDE)}SYSINFO.H  \
+   SYSINFO.ICO  \
+   SYSINFO.DLG  \
+     SYSINFO.H  \
+   SYSINFO.MAK
+
+SYSINFO.HLP:  SYSINFO.IPF  \
+   SYSINFO.MAK
+
+SYSINFO.OBJ:  SYSINFO.C  \
+#  {$(INCLUDE);}os2.h  \
+#  {$(INCLUDE);}stdio.h  \
+#  {$(INCLUDE);}stdlib.h  \
+#  {$(INCLUDE);}bsedos.h  \
+   {.;$(INCLUDE);}sysinfo.h  \
+   {.;$(INCLUDE);}notebook.h  \
+   SYSINFO.MAK

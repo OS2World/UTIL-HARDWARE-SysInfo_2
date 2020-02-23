@@ -1,0 +1,163 @@
+DLGINCLUDE 1 "SYSINFO.H"
+
+DLGTEMPLATE IDD_NB_PAGE3A LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_NB_PAGE3A, 12, 6, 148, 130, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        LTEXT           "Timer Interval", 5008, 9, 88, 66, 8
+        RTEXT           "", IDD_DIS_TIME_INTERVAL_FLD, 85, 88, 51, 8
+        LTEXT           "Millisec Counter", 302, 9, 77, 74, 8
+        RTEXT           "", IDD_DIS_MS_COUNTER_FLD, 85, 77, 51, 8
+        LTEXT           "Low Order", 304, 9, 36, 56, 8
+        RTEXT           "", IDD_DIS_LO_TIME_FLD, 73, 36, 63, 8
+        LTEXT           "High Order", 306, 9, 26, 56, 8
+        RTEXT           "", IDD_DIS_HI_TIME_FLD, 73, 26, 63, 8
+        GROUPBOX        "Time (millisec)", 301, 6, 69, 134, 40
+        GROUPBOX        "Time (seconds)", 303, 6, 17, 134, 40
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE2A LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dialog Title", IDD_NB_PAGE2A, 12, 6, 148, 130, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        LTEXT           "Physical", 5201, 17, 96, 46, 8
+        LTEXT           "Resident", 5202, 17, 86, 46, 8
+        LTEXT           "Available", 5203, 17, 76, 46, 8
+        RTEXT           "", IDD_DIS_TOT_PHY_MEM_FLD, 69, 96, 67, 8
+        RTEXT           "", IDD_DIS_TOT_RES_MEM_FLD, 69, 86, 67, 8
+        RTEXT           "", IDD_DIS_TOT_AVAIL_MEM_FLD, 69, 76, 67, 8
+        GROUPBOX        "Total Current (pages)", 5204, 7, 71, 133, 43
+        LTEXT           "Private", 5205, 17, 36, 46, 8
+        LTEXT           "Shared", 5206, 17, 26, 46, 8
+        RTEXT           "", IDD_DIS_MAX_PRIVATE_MEM_FLD, 69, 36, 67, 8
+        RTEXT           "", IDD_DIS_MAX_SHARED_MEM_FLD, 69, 26, 67, 8
+        GROUPBOX        "Total Maximum (bytes)", 5207, 7, 10, 133, 45
+        LTEXT           "Component Len", 5008, 17, 16, 67, 8
+        RTEXT           "", IDD_DIS_MAX_COMP_LEN_FLD, 85, 16, 51, 8
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE3 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_NB_PAGE3, 12, 6, 148, 130, NOT FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        CTEXT           "This Section will display the current values with r"
+                        "espect to your              System's Timers.", 202, 
+                        25, 40, 91, 44, DT_WORDBREAK
+        GROUPBOX        "", 5032, 10, 7, 125, 114
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE2 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_NB_PAGE2, 12, 6, 148, 130, NOT FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        CTEXT           "This Section will display the current values with r"
+                        "espect        to your                   System's Me"
+                        "mory.", 5102, 20, 40, 105, 44, DT_WORDBREAK
+        GROUPBOX        "", 5022, 11, 9, 125, 111
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE1 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_NB_PAGE1, 12, 6, 148, 130, NOT FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        ICON            ID_MENU_RESOURCE, 0, 63, 27, 21, 16, WS_GROUP
+        CTEXT           "IBM Operating System/2", 5003, 13, 86, 120, 8
+        CTEXT           "", IDD_VERSION, 13, 75, 120, 8
+        GROUPBOX        "", 5014, 13, 67, 124, 40
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE1B LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_NB_PAGE1B, 12, 6, 148, 130, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        LTEXT           "Maximum Wait", 5003, 8, 85, 72, 8
+        LTEXT           "Minimum Value", 5004, 8, 55, 71, 8
+        LTEXT           "Maximum Value", 5005, 8, 45, 70, 8
+        LTEXT           "Dynamic Priority", 5006, 8, 20, 77, 8
+        RTEXT           "", IDD_DIS_MAX_WAIT_FLD, 86, 85, 50, 8
+        RTEXT           "", IDD_DIS_MIN_TIMESLICE_FLD, 82, 55, 54, 8
+        RTEXT           "", IDD_DIS_MAX_TIMESLICE_FLD, 82, 45, 54, 8
+        RTEXT           "", IDD_DIS_DYNPRI_FLD, 85, 20, 51, 8
+        GROUPBOX        "Variation", 5007, 5, 14, 135, 24
+        GROUPBOX        "Time Slice (milliseconds)", 5008, 5, 41, 135, 32
+        GROUPBOX        "Seconds", 5009, 5, 76, 135, 30
+    END
+END
+
+DLGTEMPLATE IDD_NB_EXIT_PAGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_NB_EXIT_PAGE, 12, 6, 148, 130, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        ICON            ID_MENU_RESOURCE, 0, 63, 73, 21, 16, WS_GROUP
+        PUSHBUTTON      "E~xit", IDD_NB_NOTEBOOK_CLOSE, 53, 34, 40, 14
+        GROUPBOX        "Thank You", 5300, 12, 8, 123, 115
+        GROUPBOX        "", 6000, 38, 26, 71, 33
+        GROUPBOX        "", 6001, 50, 66, 48, 35
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE_HELP LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dialog Title", IDD_NB_PAGE_HELP, 12, 6, 148, 130, NOT 
+            FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        CTEXT           "To receive Information about the actual system para"
+                        "meters, click the mouse on the main menu, then clic"
+                        "k on the Display Option, this will highlight 'Syste"
+                        "m Information', then press the F1 key.", 6000, 25, 
+                        17, 92, 92, DT_WORDBREAK
+        GROUPBOX        "", IDD_VERSION, 10, 11, 126, 110
+    END
+END
+
+DLGTEMPLATE IDD_ABOUTBOX LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "About Sysinfo", IDD_ABOUTBOX, 27, 8, 204, 83, WS_VISIBLE, 
+            FCF_TITLEBAR
+    BEGIN
+        CTEXT           "Sysinfo", 3080, 34, 71, 129, 8
+        CTEXT           "A PM System Information Utility", 3081, 0, 61, 203, 
+                        8
+        CTEXT           "Version 1.00 - 01/01/93", 3082, 3, 52, 198, 8
+        CTEXT           "(C)opyright 1993, Gene Backlin", 3084, 1, 41, 200, 
+                        8
+        CTEXT           "All Rights Reserved", 3085, 1, 32, 201, 8
+        CTEXT           "CompuServe ID 70401,1574", 3086, 5, 21, 193, 8
+        ICON            ID_MENU_RESOURCE, 0, 4, 63, 21, 16, WS_GROUP
+        DEFPUSHBUTTON   "~Ok", DID_OK, 79, 3, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_NB_PAGE1A LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Dialog Title", IDD_NB_PAGE1A, 12, 6, 148, 130, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        LTEXT           "Max. Path (bytes)", 5003, 13, 88, 78, 8
+        LTEXT           "Maximum Text", IDD_NB_PAGE1B, 13, 48, 71, 8, NOT 
+                        WS_GROUP
+        LTEXT           "Maximum PM", 5004, 13, 38, 67, 8, NOT WS_GROUP
+        LTEXT           "Maximum VDM", 5005, 13, 28, 67, 8, NOT WS_GROUP
+        RTEXT           "", IDD_DIS_MAX_PATH_FLD, 94, 88, 42, 8, NOT 
+                        WS_GROUP
+        RTEXT           "", IDD_DIS_MAX_TEXT_FLD, 95, 48, 41, 8, NOT 
+                        WS_GROUP
+        RTEXT           "", IDD_DIS_MAX_PMSESS_FLD, 95, 38, 41, 8, NOT 
+                        WS_GROUP
+        RTEXT           "", IDD_DIS_MAX_VDMSESS_FLD, 95, 28, 41, 8, NOT 
+                        WS_GROUP
+        GROUPBOX        "Sessions", 5006, 7, 22, 133, 44
+        LTEXT           "Boot Drive", 5008, 13, 79, 66, 8
+        RTEXT           "", IDD_DIS_BOOTDRIVE_FLD, 85, 79, 51, 8
+        GROUPBOX        "Environment", 5014, 7, 72, 132, 35
+    END
+END

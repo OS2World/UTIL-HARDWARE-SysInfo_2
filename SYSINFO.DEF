@@ -1,0 +1,22 @@
+;  SYSINFO.DEF
+;
+
+
+NAME    SYSINFO	WINDOWAPI
+DESCRIPTION 'Sysinfo (C)opyright 1992, Gene Backlin'
+PROTMODE
+
+STUB	'OS2STUB.EXE'
+
+DATA    MULTIPLE
+
+STACKSIZE   8192
+HEAPSIZE    8192
+
+EXPORTS
+  ClientWndProc
+  AboutDlgProc
+  NotebookDlgProc
+
+
+
